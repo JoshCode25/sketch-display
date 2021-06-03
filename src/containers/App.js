@@ -4,7 +4,7 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
 import FilterBox from '../components/FilterBox';
-import sketchArray from '../sketchImages';
+import sketchArray from '../sketchArray';
 
 class App extends Component {
   constructor() {
@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render() {
-    const { robots, searchfield, searchId } = this.state;
+    const { robots, searchfield } = this.state;
     const filteredRobots = robots.filter(robot =>{
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     })
