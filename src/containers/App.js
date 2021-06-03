@@ -4,29 +4,30 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
 import FilterBox from '../components/FilterBox';
+import sketchArray from '../sketchImages';
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      robots: [],
+      robots: sketchArray,
       searchfield: '',
-      filterfield: ''
+      // searchId: 'name'
     }
   }
 
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response=> response.json())
-      .then(users => {this.setState({ robots: users})});
-  }
+  // componentDidMount() {
+  //   fetch('https://jsonplaceholder.typicode.com/users')
+  //     .then(response=> response.json())
+  //     .then(users => {this.setState({ robots: users})});
+  // }
 
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value })
   }
 
   render() {
-    const { robots, searchfield } = this.state;
+    const { robots, searchfield, searchId } = this.state;
     const filteredRobots = robots.filter(robot =>{
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     })
