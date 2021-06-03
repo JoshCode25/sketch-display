@@ -35,9 +35,11 @@ class App extends Component {
       <h1>Loading</h1> :
       (
         <div className='tc'>
-          <h1 className='f1'>RoboFriends</h1>
-          <FilterBox/>
-          <SearchBox searchChange={this.onSearchChange}/>
+          <h1 className='f1'>Josh's Sketches</h1>
+          <div className='flex flex-row justify-center'>
+            <FilterBox/>
+            <SearchBox searchChange={this.onSearchChange}/>
+          </div>
           <Scroll>
             <CardList robots={filteredRobots} />
           </Scroll>
