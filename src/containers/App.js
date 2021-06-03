@@ -4,7 +4,7 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
 import FilterBox from '../components/FilterBox';
-import sketchArray from '../sketchArray';
+import {sketchArray} from '../sketchArray';
 
 class App extends Component {
   constructor() {
