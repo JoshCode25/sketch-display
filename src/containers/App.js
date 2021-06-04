@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      robots: sketchArray,
+      sketches: sketchArray,
       searchfield: '',
       // searchId: 'name'
     }
@@ -19,7 +19,7 @@ class App extends Component {
   // componentDidMount() {
   //   fetch('https://jsonplaceholder.typicode.com/users')
   //     .then(response=> response.json())
-  //     .then(users => {this.setState({ robots: users})});
+  //     .then(users => {this.setState({ sketches: users})});
   // }
 
   onSearchChange = (event) => {
@@ -27,11 +27,11 @@ class App extends Component {
   }
 
   render() {
-    const { robots, searchfield } = this.state;
-    const filteredRobots = robots.filter(robot =>{
-      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+    const { sketches, searchfield } = this.state;
+    const filteredSketches = sketches.filter(sketch =>{
+      return sketch.name.toLowerCase().includes(searchfield.toLowerCase());
     })
-    return !robots.length ?
+    return !sketches.length ?
       <h1>Loading</h1> :
       (
         <div className='tc'>
@@ -41,7 +41,7 @@ class App extends Component {
             <SearchBox searchChange={this.onSearchChange}/>
           </div>
           <Scroll>
-            <CardList robots={filteredRobots} />
+            <CardList sketches={filteredSketches} />
           </Scroll>
         </div>
       );
