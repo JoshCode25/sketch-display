@@ -3,7 +3,6 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
-import FilterBox from '../components/FilterBox';
 import {sketchArray} from '../sketchArray';
 
 class App extends Component {
@@ -12,15 +11,8 @@ class App extends Component {
     this.state = {
       sketches: sketchArray,
       searchfield: '',
-      // searchId: 'name'
     }
   }
-
-  // componentDidMount() {
-  //   fetch('https://jsonplaceholder.typicode.com/users')
-  //     .then(response=> response.json())
-  //     .then(users => {this.setState({ sketches: users})});
-  // }
 
   onSearchChange = (event) => {
     this.setState({ searchfield: event.target.value })
@@ -29,7 +21,15 @@ class App extends Component {
   render() {
     const { sketches, searchfield } = this.state;
     const filteredSketches = sketches.filter(sketch =>{
-      return sketch.name.toLowerCase().includes(searchfield.toLowerCase());
+      let filterboolean = false;
+      let nameFilter = sketch.name.toLowerCase().includes(searchfield.toLowerCase());
+      let projectFilter = sketch.project.toLowerCase().includes(searchfield.toLowerCase());
+      let typeFilter = sketch.type.toLowerCase().includes(searchfield.toLowerCase());
+
+      if( nameFilter || projectFilter || typeFilter) {
+        filterboolean = true;
+      }
+      return filterboolean;
     })
     return !sketches.length ?
       <h1>Loading</h1> :
@@ -37,7 +37,6 @@ class App extends Component {
         <div className='tc'>
           <h1 className='f1'>Josh's Sketches</h1>
           <div className='flex flex-row justify-center'>
-            <FilterBox/>
             <SearchBox searchChange={this.onSearchChange}/>
           </div>
           <Scroll>
