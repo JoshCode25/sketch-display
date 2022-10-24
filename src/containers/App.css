@@ -12,3 +12,8 @@ h1 {
   font-weight: 200;
   color: #0ccac4;
 }
+
+.project-image {
+  background-color: white;
+  width: 300px;
+}
