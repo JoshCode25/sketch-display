@@ -276,84 +276,72 @@ export const sketchArray = [
     },
     {
         id: "fg-22",
-        name: "Action - Harvest",
-        project: "Farm Game",
-        type: "icon"
-    },
-    {
-        id: "fg-23",
-        name: "Action - Harvest",
-        project: "Farm Game",
-        type: "icon"
-    },
-    {
-        id: "fg-24",
         name: "Action - Plant",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-25",
+        id: "fg-23",
         name: "Action - Water",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-26",
+        id: "fg-24",
         name: "Action - Work",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-27",
+        id: "fg-25",
         name: "Icon - Baker",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-28",
+        id: "fg-26",
         name: "Icon - Cook",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-29",
-        name: "Icon - Enertainer",
+        id: "fg-27",
+        name: "Icon - Entertainer",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-30",
+        id: "fg-28",
         name: "Icon - Celebration",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-31",
+        id: "fg-29",
         name: "Icon - Festival",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-32",
+        id: "fg-30",
         name: "Icon - Holiday",
         project: "Farm Game",
         type: "icon"
     },
     {
-        id: "fg-33",
+        id: "fg-31",
         name: "Card Back - Crops",
         project: "Farm Game",
         type: "picture"
     },
     {
-        id: "fg-34",
+        id: "fg-32",
         name: "Card Back - Farmhand",
         project: "Farm Game",
         type: "picture"
     },
     {
-        id: "fg-35",
+        id: "fg-33",
         name: "Card Back - Marketeer",
         project: "Farm Game",
         type: "picture"
