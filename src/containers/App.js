@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       sketches: sketchArray,
       searchfield: '',
-      // searchId: 'name'
+      searchId: 'name'
     }
   }
 
